@@ -1,1 +1,18 @@
-Hello
+<h2>
+{{auction.name}}
+</h2>
+<h3>
+{{this.name}}
+</h3>
+
+{{outlet}}
+
+{{#link-to 'newItem' this.id}}
+  <a class="btn">Add an item to this lot</a>
+{{/link-to}}
+
+<ul>
+{{#each item in items}}
+  <li>{{item.name}}, {{item.value}}</li>
+{{/each}}
+</ul>

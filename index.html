@@ -16,12 +16,16 @@
     <script src="store.js"></script>
 
     <script src="controllers/auctions.js"></script>
+    <!-- <script src="controllers/auction.js"></script> -->
     <script src="controllers/newLot.js"></script>
+    <script src="controllers/lot.js"></script>
+    <script src="controllers/newItem.js"></script>
 
     <script src="routes/auctions.js"></script>
     <script src="routes/auction.js"></script>
     <script src="routes/newLot.js"></script>
     <script src="routes/lot.js"></script>
+    <script src="routes/newItem.js"></script>
 
     <script src="models/auction.js"></script>
     <script src="models/lot.js"></script>
@@ -29,7 +33,9 @@
 
 
     <script>
-      EmberHandlebarsLoader.loadTemplates(['application', 'auctions', 'auction', 'newLot', 'lot']);
+      EmberHandlebarsLoader.loadTemplates([
+        'application', 'auctions', 'auction', 'newLot', 'lot', 'newItem'
+      ]);
     </script>
   </head>
   <body>
