@@ -1,0 +1,1 @@
+CRDeluxe = Ember.Application.create();
