@@ -1,0 +1,18 @@
+<form>
+  <div class="form-group">
+      {{input type="text" class="form-control" value=name placeholder="auction name"}}
+      {{input type="date" class="form-control" value=date}}
+  </div>
+    <button {{action 'addAuction'}}>Add</button>
+</form>
+
+
+<ul>
+    {{#each auction in model}}
+      <li>
+        {{#link-to 'auction' auction}}
+          {{auction.name}}, {{auction.auctionDate}}
+        {{/link-to}}
+      </li>
+    {{/each}}
+</ul>
