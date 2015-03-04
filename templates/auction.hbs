@@ -12,3 +12,11 @@
 {{#link-to 'newLot' this.id}}
 <a class="btn">Add lot to this auction</a>
 {{/link-to}}
+
+<ul>
+{{#each lot in lots}}
+  {{#link-to 'lot' this.id lot.id}}
+    <li>{{lot.name}}</li>
+  {{/link-to}}
+{{/each}}
+</ul>
