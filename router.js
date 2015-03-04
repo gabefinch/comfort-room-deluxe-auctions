@@ -1,4 +1,4 @@
 CRDeluxe.Router.map(function() {
-  this.resource('home')
+  this.resource("auction", {path: '/'})
 
 });
