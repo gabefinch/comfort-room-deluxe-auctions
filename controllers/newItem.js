@@ -8,6 +8,9 @@ CRDeluxe.NewItemController = Ember.ArrayController.extend({
       });
       newItem.save();
 
+      this.set('name', "");
+      this.set('value', "");
+
       var lot = this.get('controllers.lot.model');
       lot.get('items').pushObject(newItem);
       lot.save();

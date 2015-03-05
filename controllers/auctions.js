@@ -6,6 +6,8 @@ CRDeluxe.AuctionsController = Ember.ArrayController.extend({
         auctionDate: this.get('date')
       });
       newAuction.save();
+      this.set('name', "");
+      this.set('date', "");
     }
   }
 });

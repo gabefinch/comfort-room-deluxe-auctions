@@ -1,6 +1,11 @@
 <form>
   <div class="form-group">
-    {{input type="text" value=name class="form-control"}}
+    <label> Lot Name
+      {{input type="text" value=name class="form-control"}}
+    </label>
+    <label> Historic Period
+      {{view "select" content=periods value=selectedPeriod}}
+    </label>
   </div>
   <button {{action 'save'}} class="btn">Add lot</button>
 </form>

@@ -1,7 +1,11 @@
 <form>
   <div class="form-group">
-    {{input type="text" value=name class="form-control"}}
-    {{input type="number" value=value class="form-control"}}
+    <label> Item Name
+      {{input type="text" value=name class="form-control"}}
+    </label>
+    <label> Value
+      {{input type="number" value=value class="form-control"}}
+    </label>
   </div>
   <button {{action 'save'}} class="btn">Add Item</button>
 </form>

@@ -23,7 +23,9 @@
         <div class="col-xs-9">
           {{#link-to 'lot' lot}}
             <h3>{{lot.name}}</h3>
+            <h4>{{lot.period}}</h4>
           {{/link-to}}
+            <p>{{lot.items.length}}</p>
         </div>
       </li>
     {{/each}}
