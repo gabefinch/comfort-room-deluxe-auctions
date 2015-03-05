@@ -8,6 +8,9 @@ CRDeluxe.AuctionsController = Ember.ArrayController.extend({
       newAuction.save();
       this.set('name', "");
       this.set('date', "");
+    },
+    deleteAuction: function(auction) {
+      auction.destroyRecord();
     }
   }
 });

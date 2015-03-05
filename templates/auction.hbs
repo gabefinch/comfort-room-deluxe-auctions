@@ -26,6 +26,7 @@
             <h4>{{lot.period}}</h4>
           {{/link-to}}
             <p>{{lot.items.length}}</p>
+            <button class="btn btn-primary" {{action 'lotDelete' lot}}>Delete</button>
         </div>
       </li>
     {{/each}}
@@ -33,6 +34,6 @@
 
 {{outlet}}
 
-{{#link-to 'newLot' this.id}}
-<a class="btn">Add lot to this auction</a>
-{{/link-to}}
+{{#if showAdd}}
+  <a class="btn" {{action 'toggleAdd'}}>Add lot to this auction</a>
+{{/if}}

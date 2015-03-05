@@ -11,6 +11,7 @@
             <h3>{{auction.name}}</h3>
             <h6>{{auction.auctionDate}}</h6>
           {{/link-to}}
+          <button {{action 'deleteAuction' auction}} class="btn btn-danger">Delete</button>
         </div>
       </li>
     {{/each}}
