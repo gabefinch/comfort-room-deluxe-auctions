@@ -14,7 +14,9 @@
 
 <ul>
 {{#each item in items}}
-  <li>{{item.name}}, {{item.value}}</li>
+  <li>{{item.name}}, {{item.value}}
+  <button {{action 'itemDelete' item}} class="btn btn-xs btn-danger ">Delete</button>
+  </li>
 {{/each}}
 </ul>
 
@@ -23,5 +25,3 @@
 {{#if showAdd}}
   <a class="btn" {{action 'toggleAdd'}}>Add an item to this lot</a>
 {{/if}}
-<!-- {{#link-to 'newItem' this.id}}
-{{/link-to}} -->
