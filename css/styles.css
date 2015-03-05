@@ -1,0 +1,33 @@
+.no-padding {
+  padding-left: 0;
+}
+
+.auction_list {
+  list-style: none;
+  padding: 15px;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 10px;
+  text-align:center;
+}
+
+.auction-image {
+  width: 150px;
+  display: inline;
+  border: none;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.jumbotron {
+  background: url('http://www.rauschenbusch.org/wp-content/uploads/2015/01/mosaic-floor-tile-white.jpg');
+  background-size: cover;
+  height: 185px;
+}
+
+.jumbotron h1 {
+  /*color: #2196f3;*/
+  text-align: center;
+  opacity:1;
+}
+.auction-header {
+  text-align:center;
+}

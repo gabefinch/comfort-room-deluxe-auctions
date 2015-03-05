@@ -1,9 +1,16 @@
-<h2>
-{{auction.name}}
-</h2>
-<h3>
-{{this.name}}
-</h3>
+<ol class="breadcrumb">
+
+  <li><a href="#">Home</a></li>
+
+  <li>
+    {{#link-to 'auction' auction.id}}
+      <a >{{auction.name}}</a>
+    {{/link-to}}
+  </li>
+
+  <li class="active">{{name}}</li>
+
+</ol>
 
 {{outlet}}
 

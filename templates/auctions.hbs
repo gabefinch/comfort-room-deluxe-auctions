@@ -1,18 +1,26 @@
-<form>
+
+<h4>Upcoming Auctions: </h4>
+<ul class="no-padding">
+    {{#each auction in model}}
+      <li class="auction_list row">
+        <div class="col-xs-3">
+          <img class="auction-image" src="css/imgs/fancy_toilet_2.jpg" alt="placeholder toilet" />
+        </div>
+        <div class="col-xs-9">
+          {{#link-to 'auction' auction}}
+            <h3>{{auction.name}}</h3>
+            <h6>{{auction.auctionDate}}</h6>
+          {{/link-to}}
+        </div>
+      </li>
+    {{/each}}
+</ul>
+
+<form class="well">
+  <h4>Add A New Auction</h4>
   <div class="form-group">
       {{input type="text" class="form-control" value=name placeholder="auction name"}}
       {{input type="date" class="form-control" value=date}}
   </div>
-    <button {{action 'addAuction'}}>Add</button>
+    <button class="btn btn-success" {{action 'addAuction'}}>Add</button>
 </form>
-
-
-<ul>
-    {{#each auction in model}}
-      <li>
-        {{#link-to 'auction' auction}}
-          {{auction.name}}, {{auction.auctionDate}}
-        {{/link-to}}
-      </li>
-    {{/each}}
-</ul>
