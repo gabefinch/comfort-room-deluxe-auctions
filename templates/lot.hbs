@@ -12,13 +12,22 @@
 
 </ol>
 
-<ul>
-{{#each item in items}}
-  <li>{{item.name}}, {{item.value}}
-  <button {{action 'itemDelete' item}} class="btn btn-xs btn-danger ">Delete</button>
-  </li>
-{{/each}}
+<ul class="no-padding">
+    {{#each item in items}}
+      <li class="auction_list row">
+        <div class="col-xs-3">
+          <img class="auction-image" {{bind-attr src=item.image}} alt="item" />
+        </div>
+        <div class="col-xs-9">
+            <h3>Offered Item: {{item.name}}</h3>
+            <h4>Sold by: {{item.seller}}</h4>
+            <h4>Bidding to start at: ${{item.value}}</h4>
+            <button {{action 'itemDelete' item}} class="btn btn-sm btn-danger ">Delete</button>
+        </div>
+      </li>
+    {{/each}}
 </ul>
+
 
 {{outlet}}
 

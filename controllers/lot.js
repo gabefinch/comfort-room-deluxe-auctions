@@ -3,8 +3,10 @@ CRDeluxe.LotController = Ember.ObjectController.extend({
   showAdd: true,
   actions: {
     itemDelete: function(item) {
+      var lot = this.get('model');
+      lot.get('items').removeObject(item);
+      lot.save();
       item.destroyRecord();
-      item.save();
     },
     toggleAdd: function() {
       this.set('showAdd', !this.get('showAdd'));
