@@ -3,6 +3,7 @@ CRDeluxe.AuctionController = Ember.ObjectController.extend({
   actions: {
     lotDelete: function(lot) {
       lot.destroyRecord();
+      lot.save();
     },
     toggleAdd: function() {
       this.set('showAdd', !this.get('showAdd'));

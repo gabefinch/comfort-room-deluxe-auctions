@@ -12,14 +12,16 @@
 
 </ol>
 
-{{outlet}}
-
-{{#link-to 'newItem' this.id}}
-  <a class="btn">Add an item to this lot</a>
-{{/link-to}}
-
 <ul>
 {{#each item in items}}
   <li>{{item.name}}, {{item.value}}</li>
 {{/each}}
 </ul>
+
+{{outlet}}
+
+{{#if showAdd}}
+  <a class="btn" {{action 'toggleAdd'}}>Add an item to this lot</a>
+{{/if}}
+<!-- {{#link-to 'newItem' this.id}}
+{{/link-to}} -->

@@ -20,7 +20,13 @@ CRDeluxe.NewLotController = Ember.ArrayController.extend({
       auction.save();
       var auctionController = this.get('controllers.auction');
       auctionController.set('showAdd', true);
-      this.transitionTo('auction', auction.id);
+      this.transitionTo('auction', auction.id)
+    },
+    cancel: function() {
+      var auctionController = this.get('controllers.auction');
+      auctionController.set('showAdd', true);
+      var auction = this.get('controllers.auction.model');
+      this.transitionTo('auction', auction.id)
     }
   }
 });

@@ -14,6 +14,15 @@ CRDeluxe.NewItemController = Ember.ArrayController.extend({
       var lot = this.get('controllers.lot.model');
       lot.get('items').pushObject(newItem);
       lot.save();
+      var lotController = this.get('controllers.lot');
+      lotController.set('showAdd', true);
+      this.transitionTo('lot', lot.id)
+    },
+    cancel: function() {
+      var lotController = this.get('controllers.lot');
+      lotController.set('showAdd', true);
+      var lot = this.get('controllers.lot.model');
+      this.transitionTo('lot', lot.id)
     }
   }
 });

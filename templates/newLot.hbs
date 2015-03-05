@@ -1,4 +1,4 @@
-<form>
+<form class="well">
   <div class="form-group">
     <label> Lot Name
       {{input type="text" value=name class="form-control"}}
@@ -7,5 +7,6 @@
       {{view "select" content=periods value=selectedPeriod}}
     </label>
   </div>
-  <button {{action 'save'}} class="btn">Add lot</button>
+  <button {{action 'save'}} class="btn btn-success">Add lot</button>
+  <button {{action 'cancel'}} class="btn btn-warning">Cancel</button>
 </form>
