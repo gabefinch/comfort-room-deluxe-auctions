@@ -4,7 +4,7 @@
     {{#each auction in model}}
       <li class="auction_list row">
         <div class="col-xs-3">
-          <img class="auction-image" src="css/imgs/fancy_toilet_2.jpg" alt="placeholder toilet" />
+          <img class="auction-image" {{bind-attr src=image}} alt="placeholder toilet" />
         </div>
         <div class="col-xs-9">
           {{#link-to 'auction' auction}}

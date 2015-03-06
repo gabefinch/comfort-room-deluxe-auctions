@@ -7,11 +7,15 @@ CRDeluxe.NewItemController = Ember.ArrayController.extend({
 
   actions: {
     save: function() {
+      var image = this.get('image');
+      if(image==="" || image ==="http://") {
+        image = "css/imgs/fancy_toilet_2.jpg";
+      }
       var newItem = this.store.createRecord('item', {
         name: this.get('name'),
         seller: this.get('seller'),
         value: this.get('value'),
-        image: this.get('image')
+        image: image
       });
 
       newItem.save();
@@ -31,7 +35,7 @@ CRDeluxe.NewItemController = Ember.ArrayController.extend({
     cancel: function() {
       this.set('name', "Toilet");
       this.set('value', 10000);
-      this.set('seller', 'anonymous');
+      this.set('seller', 'Anonymous');
       this.set('image', 'http://');
 
       var lotController = this.get('controllers.lot');

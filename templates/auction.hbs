@@ -5,20 +5,22 @@
 
 
 <div class="page-header auction-header">
-  <h1>
-    ~ {{name}} ~
-  </h1>
-  <h2>
+  <h3>
+    {{name}}
+  </h3>
+  <h5>
     {{auctionDate}}
-  </h2>
+  </h5>
 </div>
 
 <h4>Auction Lots: </h4>
 <ul class="no-padding">
-    {{#each lot in lots}}
+    {{#each lot in lots itemController="lot"}}
       <li class="auction_list row">
+        {{lot.keyImage}}
         <div class="col-xs-3">
-          <img class="auction-image" src="css/imgs/fancy_toilet_2.jpg" alt="placeholder toilet" />
+          <img class="auction-image" {{bind-attr src=lot.image}} alt="placeholder toilet" />
+          <!-- <button {{action 'pickImage' lot}}>Pick image</button> -->
         </div>
         <div class="col-xs-9">
           {{#link-to 'lot' lot}}

@@ -1,4 +1,6 @@
 CRDeluxe.AuctionsController = Ember.ArrayController.extend({
+  needs: ['lot'],
+  image: "",
   actions: {
     addAuction: function() {
       var newAuction = this.store.createRecord('auction', {
